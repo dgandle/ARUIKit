@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ARUIKit"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "A library for creating UIKit-like views in 3D for ARKit"
 
   # This description is used to generate tags and improve search results.
