@@ -11,6 +11,8 @@
 		913DB6ED20E92BD600673D18 /* ARUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913DB6EC20E92BD600673D18 /* ARUIView.swift */; };
 		913DB6EF20E92C1800673D18 /* ARUIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913DB6EE20E92C1800673D18 /* ARUIResponder.swift */; };
 		913DB6F120E92C3800673D18 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913DB6F020E92C3800673D18 /* Utils.swift */; };
+		913DB6F320E931AF00673D18 /* ARUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913DB6F220E931AF00673D18 /* ARUILabel.swift */; };
+		913DB6F520E931C800673D18 /* ARUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913DB6F420E931C800673D18 /* ARUIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		913DB6EC20E92BD600673D18 /* ARUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUIView.swift; sourceTree = "<group>"; };
 		913DB6EE20E92C1800673D18 /* ARUIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUIResponder.swift; sourceTree = "<group>"; };
 		913DB6F020E92C3800673D18 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		913DB6F220E931AF00673D18 /* ARUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUILabel.swift; sourceTree = "<group>"; };
+		913DB6F420E931C800673D18 /* ARUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +58,11 @@
 			children = (
 				913DB6E420E92BB000673D18 /* ARUIKit.h */,
 				913DB6E520E92BB000673D18 /* Info.plist */,
+				913DB6F020E92C3800673D18 /* Utils.swift */,
 				913DB6EC20E92BD600673D18 /* ARUIView.swift */,
 				913DB6EE20E92C1800673D18 /* ARUIResponder.swift */,
-				913DB6F020E92C3800673D18 /* Utils.swift */,
+				913DB6F220E931AF00673D18 /* ARUILabel.swift */,
+				913DB6F420E931C800673D18 /* ARUIImageView.swift */,
 			);
 			path = ARUIKit;
 			sourceTree = "<group>";
@@ -140,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913DB6F520E931C800673D18 /* ARUIImageView.swift in Sources */,
 				913DB6ED20E92BD600673D18 /* ARUIView.swift in Sources */,
 				913DB6EF20E92C1800673D18 /* ARUIResponder.swift in Sources */,
 				913DB6F120E92C3800673D18 /* Utils.swift in Sources */,
+				913DB6F320E931AF00673D18 /* ARUILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
