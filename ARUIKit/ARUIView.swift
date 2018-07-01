@@ -14,20 +14,25 @@ public class ARUIView: ARUIResponder {
     
     // MARK: - Private properties
     
+    /// The SpriteKit scene to be set as the view's material.
     private let scene = SKScene()
     
     // MARK: - Public properties
     
+    /// The receiver's immediate subviews.
     public var subviews: [ARUIView] = []
     
+    /// The receiver's superview, or nil if it has none.
     public private(set) var superview: ARUIView? {
         didSet {
             self.didMoveToSuperview()
         }
     }
     
+    /// An SKShapeNode defining the contents of the view.
     public var shapeLayer: SKShapeNode = SKShapeNode()
     
+    /// The frame rectangle, which describes the view's location and size in it's superview's coordinate system. Analagous to a UIView frame.
     public var viewFrame: CGRect = CGRect.zero {
         didSet {
             self.geometry = SCNPlane(width: viewFrame.width, height: viewFrame.height)
@@ -36,22 +41,26 @@ public class ARUIView: ARUIResponder {
         }
     }
     
+    /// The view's background color.
     public var backgroundColor: UIColor = UIColor.white {
         didSet {
             self.shapeLayer.fillColor = backgroundColor
         }
     }
     
+    /// The view's alpha value.
     public var alpha: CGFloat = 1.0 {
         didSet {
             self.shapeLayer.alpha = alpha
         }
     }
     
+    /// The center point of the view's frame rectangle.
     public var center: CGPoint {
         return CGPoint(x: self.viewFrame.midX, y: self.viewFrame.midY)
     }
     
+    /// The radius to use when drawing rounded corners for the view.
     public var cornerRadius: CGFloat = 0.0 {
         didSet {
             let plane = self.geometry as? SCNPlane
@@ -61,10 +70,14 @@ public class ARUIView: ARUIResponder {
     
     // MARK: - Initialization
     
-    override convenience init() {
+    /// Initializes and returns a new allowcated 3D view object with a frame rectangle of CGRect.zero.
+    public override convenience init() {
         self.init(frame: CGRect.zero)
     }
     
+    /// Initializes and returns a newly allocated 3D view object with the specific frame rectangle.
+    ///
+    /// - Parameter frame: The frame rectangle for the view, measured in meters. The origin on the frame is relative to a superview in which you plan to add it.
     public init(frame: CGRect) {
         super.init()
         self.setFrame(frame: frame)
@@ -77,16 +90,21 @@ public class ARUIView: ARUIResponder {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// Sets the frame property to the initialized frame parameter.
+    ///
+    /// - Parameter frame: The frame rectangle for the view, measured in meters.
     private func setFrame(frame: CGRect) {
         self.viewFrame = frame
     }
     
+    /// Sets the shapeLayer property of the view for initialization.
     private func setLayer() {
         self.shapeLayer.lineWidth = 0.0
         self.scene.backgroundColor = UIColor.clear
         self.scene.addChild(shapeLayer)
     }
     
+    /// Sets the material of the view to the scene, which contains the shapeLayer and any subviews (as SKNodes).
     private func setMaterial() {
         let material = SCNMaterial()
         material.isDoubleSided = true
@@ -95,6 +113,7 @@ public class ARUIView: ARUIResponder {
         self.geometry?.firstMaterial = material
     }
     
+    /// Sets the proper default values for public properties on initialization.
     private func setDefaultPropertyValues() {
         self.shapeLayer.fillColor = self.backgroundColor
         self.shapeLayer.alpha = self.alpha
@@ -102,6 +121,9 @@ public class ARUIView: ARUIResponder {
     
     // MARK: - Public methods
     
+    /// Adds a view to the end of the receiver's list of subviews.
+    ///
+    /// - Parameter view: The view to be added. After being added, this view appears on top of any other subviews.
     public func addSubview(_ view: ARUIView) {
         self.subviews.append(view)
         view.superview = self
@@ -136,5 +158,6 @@ public class ARUIView: ARUIResponder {
     
     /// Tells the view that its superview changed.
     public func didMoveToSuperview() { }
+    
 }
 
