@@ -1,9 +1,30 @@
 # ARUIKit
 UIKit-like objects in 3D
 
-## Getting Started
+## Project Status
 
-1. Ensure you have CocoaPods installed
-2. From your project directory, run `pod init`
-3. Add `pod 'ARUIKit', '~> 0.1'` to your podfile
-4. Run `pod install`
+This project is in prerelease and under active development. It is not ready for production use.
+
+## Installation
+
+### CocoaPods
+
+Add the following entry to your Podfile:
+```
+pod 'ARUIKit', '~> 0.1'
+```
+Then run `pod install`
+
+Don't forget to import the framework in any file you'd like to use with `import ARUIKit`.
+
+## Usage
+
+_TODO_
+
+## Contributing
+
+_TODO_
+
+## License
+
+ARUIKit is released under an MIT license. See [LICENSE](https://github.com/dgandle/ARUIKit/blob/master/LICENSE) for more information.
