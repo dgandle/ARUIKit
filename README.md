@@ -3,7 +3,7 @@ UIKit-like objects in 3D
 
 ## Project Status
 
-This project is in prerelease and under active development. It is not ready for production use.
+This project is in prerelease and currently **not** under active development. It is not ready for production use.
 
 ## Installation
 
